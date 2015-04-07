@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- ######### Appender configuration -->
+
+    <!-- STDOUT APPENDER -->
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy.MM.dd HH:mm:ss.SSS} %-5p [%c{3}] - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- FILE APPENDER -->
+    <appender name="fileout" class="org.apache.log4j.RollingFileAppender">
+        <param name="MaxFileSize" value="100MB" />
+        <param name="MaxBackupIndex" value="99"/>
+        <param name="Append" value="false"/>
+        <param name="File" value="modelview-fx.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd.MM.yyyy,HH:mm:ss} %5p [%-20.40c] %m%n" />
+        </layout>
+    </appender>
+
+    <!-- ######### Logger configuration -->
+
+    <logger name="org.pcsoft.tools.modelview_fx" additivity="false">
+        <level value="trace"/>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="fileout"/>
+    </logger>
+
+
+</log4j:configuration>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.modelview_fx.ui.splash.Controller">
+   <children>
+       <ImageView>
+           <image>
+               <Image url="@../splash.png" />
+           </image>
+       </ImageView>
+      <AnchorPane onMouseClicked="#onMouseClickBackground" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ProgressBar fx:id="pbProgress" layoutX="512.0" layoutY="414.0" mouseTransparent="true" prefHeight="18.0" prefWidth="380.0" />
+            <Hyperlink layoutX="14.0" layoutY="421.0" onAction="#onActionBackgroundGraphic" style="-fx-text-fill: #700000;" text="Background Graphic by graphicburger.com" />
+            <Hyperlink layoutX="119.0" layoutY="40.0" onAction="#onActionLicence" style="-fx-text-fill: #000060;" text="Apache 2.0 Licence" />
+            <Label layoutX="132.0" layoutY="14.0" mouseTransparent="true" style="-fx-text-fill: #000060;" text="PC Soft">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox layoutX="670.0" layoutY="397.0" mouseTransparent="true" spacing="2.0">
+               <children>
+                  <Label layoutX="662.0" layoutY="397.0" style="-fx-text-fill: #700000;" text="Version" />
+                  <Label fx:id="lblVersion" style="-fx-text-fill: #700000;" text="XXX" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

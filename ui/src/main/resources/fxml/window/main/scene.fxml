@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.SubScene?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.modelview_fx.ui.window.main.MainWindowSceneController">
+    <children>
+        <SubScene fx:id="scene" height="725.0" mouseTransparent="true" width="1100.0" depthBuffer="true">
+            <root>
+                <Region />
+            </root>
+        </SubScene>
+        <Pane onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onScroll="#onMouseScroll" />
+    </children>
+</StackPane>

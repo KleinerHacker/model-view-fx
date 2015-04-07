@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Modelview FX - Core API</name>
+    <artifactId>modelview-fx.core-api</artifactId>
+	
+	<parent>
+		<groupId>org.pcsoft.tools</groupId>
+		<artifactId>modelview-fx.core</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb22-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>xsd</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <extension>true</extension>
+                            <schemaDirectory>src/main/resources/xml</schemaDirectory>
+                            <includeSchemas>
+                                <includeSchema>provider.xsd</includeSchema>
+                            </includeSchemas>
+                            <episodeFile>target/generated-sources/xjc/META-INF/provider.episode</episodeFile>
+                            <generatePackage>org.pcsoft.tools.mail_fx.core.api.types.xml</generatePackage>
+                            <forceRegenerate>true</forceRegenerate>
+                            <removeOldOutput>false</removeOldOutput>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>modelview-fx.common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

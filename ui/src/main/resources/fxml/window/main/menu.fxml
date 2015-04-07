@@ -1,0 +1,33 @@
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.modelview_fx.ui.window.main.MainWindowMenuController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="_File">
+                    <items>
+                        <MenuItem onAction="#onActionOpen" text="_Open..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem onAction="#onActionExit" text="_Exit" />
+                    </items>
+                </Menu>
+                <Menu text="_View">
+                    <items>
+                        <MenuItem onAction="#onActionReset" text="_Reset view"/>
+                    </items>
+                </Menu>
+                <Menu text="_Help">
+                    <items>
+                        <MenuItem onAction="#onActionAbout" text="_About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" />
+    </children>
+</VBox>

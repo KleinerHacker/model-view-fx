@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.modelview_fx.ui.window.main.MainWindowController">
+    <top>
+        <fx:include fx:id="menu" source="window/main/menu.fxml" BorderPane.alignment="CENTER" />
+    </top>
+    <center>
+        <fx:include fx:id="scene" source="window/main/scene.fxml" BorderPane.alignment="CENTER" />
+    </center>
+    <right>
+        <SplitPane dividerPositions="0.5" orientation="VERTICAL" BorderPane.alignment="CENTER">
+           <items>
+               <ListView fx:id="lstMeshes" prefWidth="150.0" />
+               <ListView fx:id="lstMaterials" prefWidth="150.0" />
+           </items>
+        </SplitPane>
+    </right>
+</BorderPane>
